@@ -20,7 +20,7 @@ import shutil;
 
 # =================  全局参数  =====================
 MY_RESOURCE_PATH = "D:/BF1942/Rebuild_XWWII/Historian_WWII/Patch-WF";
-THE_MOD_PATH = "D:/BF1942/Rebuild_XWWII/WarFront_____________RES";
+THE_MOD_PATH = "D:/BF1942/Rebuild_XWWII/FIN__________RES";
 THE_BF1942_PATH = "D:/BF1942/Rebuild_XWWII/bf1942___RES";
 THE_XWWII_RES_PATH = "D:/BF1942/Rebuild_XWWII/XWWII_RES";
 re_STDMESH = re.compile(r'GeometryTemplate.file (.*)');
@@ -231,9 +231,10 @@ def read_the_vehicle(VEHICLES_OBJ_PATH):
 
 # -------- 一次性移植多个武器 --------
 def batch_process():
-    VEHICLES_LIST = ["BA-64"]; #,"BT7","KV2","M3Stuart","Horch","sFH18","SdKfz222","SU76","SU122","Zis3","OpelBlitz"];
+    VEHICLES_LIST = ["I-153"]; # CharB1;
+    #shutil.copytree(THE_MOD_PATH + "/standardmesh/" + "CoastalGun", MY_RESOURCE_PATH  + "/standardmesh/" + "CoastalGun");
     for VEHICLE in VEHICLES_LIST:
-        read_the_vehicle(THE_MOD_PATH + "/objects/Vehicles/Land/" + VEHICLE +"/");
+        read_the_vehicle(THE_MOD_PATH + "/objects/Vehicles/Air/" + VEHICLE +"/");
 
 if __name__ == '__main__':
     # read_the_weapon(THE_MOD_PATH + "/objects/Handweapons/" + "Nambu" +"/");

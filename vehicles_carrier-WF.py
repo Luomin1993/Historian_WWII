@@ -231,8 +231,9 @@ def read_the_vehicle(VEHICLES_OBJ_PATH):
 
 # -------- 一次性移植多个武器 --------
 def batch_process():
-    VEHICLES_LIST = ["BA-64"]; #,"BT7","KV2","M3Stuart","Horch","sFH18","SdKfz222","SU76","SU122","Zis3","OpelBlitz"];
-    for VEHICLE in VEHICLES_LIST:
+    VEHICLES_LIST = ["CoastalGun"]; # "CoastalGun";
+    shutil.copytree(THE_MOD_PATH + "/standardmesh/" + "CoastalGun", MY_RESOURCE_PATH  + "/standardmesh/" + "CoastalGun");
+    for VEHICLE in VEHICLES_LIST: 
         read_the_vehicle(THE_MOD_PATH + "/objects/Vehicles/Land/" + VEHICLE +"/");
 
 if __name__ == '__main__':
