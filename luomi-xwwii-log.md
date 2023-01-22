@@ -2032,7 +2032,6 @@ M3GMC 的实验:将"M3GMCGunnerPCO1"的AI设置为"WespeCannon","M3GMCSPPassenge
     德军哥萨克(Cossack)需复制苏联军队独立为Soldier阵营(CossackSoldier,COSSACK_GER_0);苏军的哥萨克重载苏军即可;
     COSSACK_GER_i装备:Cossack_axis_engineer/Cossack_axis_rifleman/Cossack_axis_NCO/Cossack_axis_support/Cossack_axis_officer;Icon_cossack_sword;
 
-
 - Swordfish仍然会导致跳出:删去...后期再加;
 
 - 将含有"debree_dirt1A"的特效替换为烟雾特效:沙子的是"Em_richoSand1",替换为新的烟雾"Em_richoGround_Basic_smoke"(e_muz1_I.dds);
@@ -2249,16 +2248,30 @@ How to use this mappack: take the map files into your "BF1942\Mods\FHE\archives\
 
 - XWW2_Khalkin:蒙古vs日本,12th May 1939;马圈的重复问题,xww2的和bg42的不一样(horsebarn_m1);贴图缺失:Bunker_tarnnetz;
 
-
 30岁、博士毕业、迷茫和顿悟并存;
 知识和科研、爱和快乐、理想和现实都是相互矛盾的;
 任何仪式、关系、头衔的改变都不能解决问题,问题还是存在的;
-没人值得你一辈子依靠,除了你自己的Logical mind + Persistence + Humility;
+没人值得你一辈子依靠,除了你自己的 Logical mind + Persistence + Humility;
 
 -----------------------------------------------------------
-- 枪械开火烟雾的优化:更加喷射状(e_MuzzRifle/e_MuzzGun);
-    其中出现的问题,烟雾特效次数过多:通过以下数值的配合来调整,其中 intensity 的次数不要超过 timeToLive CRD_UNIFORM 的最长周期;
+- 枪械开火烟雾的优化:更加喷射状(e_MuzzRifle/e_MuzzGun)新增 em_MuzzRifle;
+    其中出现的问题,烟雾特效次数过多:通过以下数值的配合来调整,其中 intensity 的次数不要超过 timeToLive CRD_UNIFORM 的最长周期;"destBlendMode"控制了显示模式:透明或者其他;
 ```
 ObjectTemplate.timeToLive CRD_UNIFORM/0.5/1/0
 ObjectTemplate.intensity CRD_NONE/1/0/0
 ```
+
+### 装甲列车(轻型)计划
+- 调整铁轨的高度:不如调整火车"轮子Engine"的高度更高,因为铁轨过高太假;
+    还是调整铁轨的高度,因为"轮子Engine"的高度低一点就会翻车,另外铁轨底座稍许不连贯都会导致车抖动,因此设一个光滑的长底座为Col;
+- Light_Armoured_Train_Mod(修改自 BF1918 的 Icon_ArmouredTrainGunCar):Light_Armoured_Train_Mod_Body_M1;
+    加了 Ehrhardt 的几个机枪位 Ehrhardt_SideMG3(Coop模式下无报错跳出:可修改"aiTemplate"和"setVehicleType"来修正);
+- 在 XWW2_Manila 中替代铁路的简单高台公路模型:wwii_streetroad_very_long;
+- 录一个"战地1942-哥萨克手中的波波沙冲锋枪"的视频:修改 ppsh41fire.wav,ppsh41firemono.wav;
+    本次视频展示了哥萨克骑兵和装甲列车,视频里的机枪装甲列车是我从战地1918拿的模型(战地1918里的这款列车不可移动),然后通过100行代码实现的,这么少的代码量主要是因为我引用了之前写的火车Engine代码和其他载具的机枪位;
+    接下来的计划开展的开发内容如下:
+    1.更多各式各样的重型/轻型装甲列车,均在有Bot的地图;
+    2.更多各式各样的堡垒/可摧毁建筑,均在有Bot的地图;
+    3.可能引入西欧荷兰战役、西班牙内战、魏玛德国冲突、第一次苏波战争、意希战争等内容;
+
+- 奇怪的问题:ED42失效了无法打开,卡死在了读取Objects那里,问题暂时还没找到;
