@@ -1889,7 +1889,7 @@ XWW2_Songhu128:
 每个模组都有自己的优缺点,精力有限,我只能忽略大部分缺点,把它的优点部分做到极致;
 我强调的是深度,不是广度;
 
-"有太多的信息,知道这些信息反而对你不好。现在有information overload problem,因为太多的信息会confine your imagination,因为每个信息都像是事实,非常肯定的说我发现了这个、我发现了那个,所以读了一大堆paper,你什么事情也做不成,你什么事情也不敢做,因为你的思路都被限制了;"
+"有太多的信息,知道这些信息反而对你不好.现在有information overload problem,因为太多的信息会confine your imagination,因为每个信息都像是事实,非常肯定的说我发现了这个、我发现了那个,所以读了一大堆paper,你什么事情也做不成,你什么事情也不敢做,因为你的思路都被限制了;"
     ---- 蒲慕明所长在中科院神经所2010年会上的讲话;
 
 距离下一个版本上传还剩下:阿比西尼亚,菲律宾,希腊;
@@ -1998,7 +1998,7 @@ How to install this mappack:
 - XWW2_Cassino_Hill(1944年5月11日):波兰军队(英军装备) VS 绿色魔鬼伞兵师;Cass_1_M1-Cass_12_M1 贴图缺失;新增Kits:POL_EN_i;
 POL_EN_engineer/POL_EN_NCO/POL_EN_officer/POL_EN_rifleman/POL_EN_support;
 globalAmbientColor...接下来的四行对整个地图的明暗程度有巨大影响;
-    3月15日早上8点,盟军制定的代号“狄更斯”行动拉开了三战卡西诺的序幕。盟军集中了所有前线的炮火和500多架来自英国、北非、西西里的盟军重型轰炸机向卡西诺战区德军防线狂轰乱炸,德军见势不妙及时布放烟雾,炸起的烟雾和德国人刻意施放的烟火笼罩了整个卡西诺地区；后边飞来的轰炸机看不见就胡乱投弹,悲剧开始了：远离战区的新西兰27机枪营被炸,几乎全部伤亡；法国摩洛哥战地医院被炸,炮兵阵地被炸。甚至于一枚炸弹准确无误的投进了英军第8集团军里斯中将的帐篷里,幸好他跑出去了没被炸死。前线准备出击的部队被这胡轰乱炸搞得晕头转向,有的官兵甚至怀疑是德军的飞机并向其开火。广大盟军前线官兵愤然的说：这些混蛋就想早早的把炸弹扔了飞回安乐窝里去鬼混;而德军在这恐怖的轰炸中静静的等待着,他们早已对此是见惯不惊了.
+    3月15日早上8点,盟军制定的代号“狄更斯”行动拉开了三战卡西诺的序幕.盟军集中了所有前线的炮火和500多架来自英国、北非、西西里的盟军重型轰炸机向卡西诺战区德军防线狂轰乱炸,德军见势不妙及时布放烟雾,炸起的烟雾和德国人刻意施放的烟火笼罩了整个卡西诺地区；后边飞来的轰炸机看不见就胡乱投弹,悲剧开始了:远离战区的新西兰27机枪营被炸,几乎全部伤亡；法国摩洛哥战地医院被炸,炮兵阵地被炸.甚至于一枚炸弹准确无误的投进了英军第8集团军里斯中将的帐篷里,幸好他跑出去了没被炸死.前线准备出击的部队被这胡轰乱炸搞得晕头转向,有的官兵甚至怀疑是德军的飞机并向其开火.广大盟军前线官兵愤然的说:这些混蛋就想早早的把炸弹扔了飞回安乐窝里去鬼混;而德军在这恐怖的轰炸中静静的等待着,他们早已对此是见惯不惊了.
 
 - XWW2_Eindhoven(地狱公路 Hell Road):FHSW内含许多类型"Germov_r";
 - XWW2_Crimea(1944年5月9日,Main Direction of Attack):铁路缺失/Detail.dds还需调亮/增加装甲列车和碉堡;
@@ -2275,3 +2275,136 @@ ObjectTemplate.intensity CRD_NONE/1/0/0
     3.可能引入西欧荷兰战役、西班牙内战、魏玛德国冲突、第一次苏波战争、意希战争等内容;
 
 - 奇怪的问题:ED42失效了无法打开,卡死在了读取Objects那里,问题暂时还没找到;
+    2023/02/01(Discussed with Songyaru):通过对比实验和Log文件是某个3D.SM文件的问题(是"wwii_railroad_very_long_noc.rs"文本混乱导致的);
+
+战地1942的模组下经常有这种问题:"直接玩战地1/战地5不好吗?";不好,因为战地1942不是一款FPS游戏,而是一款编程游戏,丰富的Conscript语言接口,可以很方便地编写Python脚本进行二次开发,通过离散数学的知识构造复杂实时的战场机制、或者自行优化AI算法来改进Bots路径等等,自己制作模型/动作/贴图也可以极大程度自动化;总而言之,"被赐予快乐"和"自己创造快乐"的感觉是不一样的;
+
+### 新殭屍先生(XWW2扩展地图之僵尸模式)
+
+服饰模型(zombie_sir):zombie_qing_clothe_1/zombie_qing_clothe_2/zombie_qing_hat_1/zombie_qing_hat_2;
+武器即爪子(zombie_hands):zombie_hands_lhs/zombie_hands_rhs;
+
+阵营(ZombieSoldier):face_zombie1_h/face_zombie2_h/face_zombie3_h/Zombiemun_r/Zombiemov_r;还需补全身体部位的贴图(zombie_hand/zombiemouth/zombieeye)☑;
+
+其他元素:贴黄纸(zombie_paper)☑/特色陵墓建筑/修正爪子的声音(zombie_hands.wav)☑/僵尸语音☑/尸王(载具,zombie_king(zombie_king_main/zombie_king_head,尸王"瓜尔佳.守寿")☑/ZombieEngine/人体材质=41)/飞行的蝙蝠(hooted_bats/hooted_bats1/hooted_bats_m1)☑;Light_Armoured_Train_China(train_sandbags_m1);
+
+地图(XWW2_Tsing_East_Tomb,1928/07/12):(直鲁联军第三十五师,不久又扩编为第十四军,孙殿英任军长);<<世载堂杂忆>>整个盗墓行动历时八天,"自是年四月十五日至二十二日,以火药轰开陵道石门,搜获宝物而去".其中给这位连长印象最深的是挖掘慈禧的陵寝:"当时将棺盖揭开,见霞光满棺,兵士每人执一大电筒,光为之夺,众皆骇异.俯视棺中,西太后面貌如生,手指长白毛寸余."有几个士兵大喊起来,把枪架在棺材上瞄准慈禧的遗体,"防僵尸起而伤人";
+    装备"zombie_kits":ZOMBIE_KIT_1;Icon_zombie_hands.dds/zombie_kit.dds;box_treasure;
+    视频(BV1ie4y1N7Ez);
+
+- zombie_mod 里单机bots路径正常可玩的地图:zomb_bridge/zomb_carrefour/zomb_labo_beta/zomb_Metro(地铁)/zomb_ruines/zomb_village_beta;
+
+- 侧位机枪的火车厢(Light_Armoured_Train_Cart):引用"traincart_m1"
+- 自动启动地图尝试:
+    ```D:\BF1942\BF1942.exe +game XWWII +joinServer 127.0.0.1:14567```
+
+带载具进入动作的FH衍生mod:https://www.moddb.com/mods/fhrmod/downloads/fhr-v018;
+
+XWW2_Prome:反攻缅甸卑谬(Myanmar,May 2nd,1945).
+
+- 实现新的载具之间的连接器 XWW2_SP_Puller:参考BF1918的"TrainPuller_Spawner"
+    实现"CivModCar_Tractor":轿车拖拽大炮;发现并不能简单实现 除非给被拖拽载具另加 Engine;
+    而如果按照原有的写法,被拖拽的大炮必须本身是可移动的那种才可以被拖走;
+
+- 荷兰欧洲战场:军服(DCH_NAT_1)/轻坦(Tank_CTLS_4TAC)/有轨装甲车(Light_Armoured_Train_Holland);
+    dch_native_support/dch_AT_NCO/dch_native_rifleman/dch_native_engineer(军服重载:GENERAL_DUTCH_NAT);钢盔:Dutch_Nat_Helmet;dutch_nat_cap;
+    Tank_CTLS_4TAC:Tank_CTLS_4TAC_Hull_M1;Tank_CTLS_4TAC_Turret_M1;
+    Light_Armoured_Train_Holland:Light_Armoured_Train_Holland_M1;Light_Armoured_Train_Wheels_M1;
+        给"AWW2_TEST"增加火车测试轨道;
+        Coop模式下使用机枪位无报错跳出:aiTemplate 的问题,换成"Stationary_Vickers";
+    light_amoured_train_mod_Engine(轻轨装甲车引擎,隐形的):引用了"HorseBackSpringR"...;
+    XWW2_Grebbeberg:人数一上去,相当卡的问题还是没解决(确定是人数的问题,40人时不再卡)(Invasion of Holland,1940);
+    无paint纹理的小内存地图2张(修改自波卡基):
+        XWW2_Eastern_Hebei:冀东区1942年春季反扫荡战役,在兴隆东北歼灭伪蒙骑兵20多人;
+
+- 中国士兵语音部分替换☑;毛瑟手枪(单持/双持/连发)音效替换:c96gun.wav,c96gunmono.wav;
+
+----------------------------------------------------------------
+指标(8月/Luo负责的部分):
+    1.在F2域上多变元二次方程组量子求解算法研究方面,完成MQ-to-SAT转化方法的初步实现;☑
+    2.完成现有主流SAT求解器采用技术的复现;☑
+    3.在F2域上多变元二次方程组量子求解算法研究方面,结合MQ问题实例,优化MQ-to-SAT转化方法,转换效率接近Bard-Courtois-Jefferson 2007中的结果;☑
+    4.完成新型SAT求解器的经典环节设计,并初步完成强化学习技术的加入;☑
+
+"瘦身计划"(减少一些重用地图里的材质细节图以减少内存占用):处理前,levels占用3.06GB;
+    Textures套用已有地图,删ObjectLightmap文件夹内容;
+    XWW2_Arras,XWW2_Battle_of_the_Bulge,XWW2_Battleaxe,XWW2_Coventry,XWW2_Der_Untergang,XWW2_Eindhoven,XWW2_El_Alamein,XWW2_Guadalcanal,XWW2_Iwo_Jima,XWW2_Kharkov,XWW2_Kursk,XWW2_Manila,XWW2_Nomonhan,XWW2_Saipan,XWW2_Stalingrad,XWW2_Taierzhuang,XWW2_Vilnius,XWW2_Wake;☑处理后,levels占用2.65GB;
+    XWW2_Liberation_of_Caen;
+
+- 加拿大载具涂装重载:Roundel/Markings;
+- WWII中国战场:从满洲到华北武装的各种皮帽:
+    - 中东路冲突:
+        - 8月16日,苏军步兵两连、骑兵一连由苏境阿巴该图向扎兰诺尔中国阵地射击,双方战斗2小时,互有伤亡.午后2时30分,苏军步、骑、炮约一师兵力,由阿巴该图越境,向扎兰诺尔站进攻,炮击东北军阵地,双方激战5小时,苏军始退.根据当时胪膑县县长齐肇豫电称:"俄军此次越境,据闻意在破坏扎站铁桥、断绝交通".
+        - 8月19日,苏军攻陷绥滨县城.8月20日早6时,苏军用铁甲列车运兵200余名,向梁忠甲部骑兵十团进攻,战斗1小时左右苏军退去.8月23日发生密山战斗.8月25日,苏军步骑兵四百余名,在扎贲诺尔驻军四十三团阵地右前沿约千米处构筑工事.
+    - 20年代的苏军(Russian20s):SOVIET20S_i;SOVIET20S_Coat(GENERAL_Russian20s/Russian-E20s_officer.tga);
+    - 东北军(ChinaENA):CHINAENA_i;CHINAENA_Hat_furo;CHINAENA_Hat_furc;CHINAENA_Hat_furn(wb_broad_caps_b);
+        (CHINAENA_officer/CHINAENA_NCO/CHINAENA_rifleman/CHINAENA_engineer)
+    - XWW2_Suibing(XWW2_Battle_of_Ladoga):Kit_mp18_with_drum;xww2_gun_tape;厕所 BAs_Boomer(须平整地面否则会移动);重载脸部:吴京/邓超/郑恺;
+    - XWW2_Lubin:BG42中的塔叫"o_pagoda_m1";(suburbhouse_3_closed_m1->xww2_china_city_building_2_m1)(citymesh1_closed_m1->mb_china_house_s3_m1)(eu_fence_m1->mb_native_village_short_wall_m1);
+       cccp_budyonny_hat_opened/cccp_budyonny_hat_closed(对比 piippalakki) 改小;新增 SOVIET20S_Hat;
+
+### Blender UV 贴图
+
+- 流程:新建贴图,选图像,模型点面对到图像区域即可,导出后再手动.rs里填图像即可;
+    mp18_band:由"xww2_gun_tape"修改;
+
+
+### 伪蒙战役
+
+- XWW2_Hongertu:1936年8月2至4日西北蒙汉防共自治军司令王道一部从商都出发攻打红格尔图,王道一部发动几次进攻均未攻下村庄.4日下午,傅作义赴集宁,命彭毓斌部增援,反击向红格尔图、土牧尔台进犯的西北蒙汉防共自治军王道一部2000余人,歼灭过半.王道一逃回商都大本营,被日军枪毙.
+    MengjiangSoldier:MENGJ_i;MENGJ_Hat_Uni;MENGJ_Hat_Peo;MENGJ_Hat_Ofc;GNERAL_MENGJ;(黄渤/孙红雷/陈凯歌)
+    "他们喊的不是"乌拉",而是уралан(乌德拉),卡尔梅语(蒙古族的一支)前进的意思."乌拉"是ура."
+    (mengj_officer/mengj_rifile/mengj_support)
+
+- 手持旗帜的骑兵 warhorse_with_flag:(cavalry_flag_mengj)手部的姿势语句:
+    ```
+    ObjectTemplate.addSkeletonIK Bip01_R_Hand 0.045/0.1/0.025 0/180/90
+    ObjectTemplate.AddSkeletonIK string x(+:靠后)/y(+:没有变化)/z(+:向右) x/y/z
+    argument 1:Bip01_L_Foot, Bip01_L_Hand, Bip01_R_Foot, Bip01_R_Hand
+    argument 2:-0.033/0.573/-0.174, -0.05/0.0/-0.95,...
+    argument 3:-30/80/90, -30/90/90, -80/-60/50, -80/-90/0,...
+    ```
+
+### 地图裁剪工作
+继续做地图的size裁剪,引用公有的Texures:XWW2_Aachen/XWW2_Arden_Mountains/XWW2_Bloody_Ridge/XWW2_Bocage/XWW2_Fornebu/XWW2_Grebbeberg/XWW2_Hannut/XWW2_Ichi-go/XWW2_Juno_Nan_Green_Sector/XWW2_Kamenets_Podolskiy/XWW2_Khalkin/XWW2_Market_Garden/XWW2_Raatteentie/XWW2_Rostov/XWW2_Sisak/XWW2_Songhu128/XWW2_Tokyo226/XWW2_Villers_Bocage/XWW2_Zitadelle/XWW2_Nanking/XWW2_Vistula_River/XWW2_Barbarossa/XWW2_Crimea/XWW2_Milne_Bay/XWW2_Dog_Green_Sector/XWW2_Salamaua/XWW2_Bzura_River/XWW2_Volga/XWW2_Volturno/XWW2_St_Mere_Eglise/XWW2_Ortona/XWW2_Caen/XWW2_Linyee_Defence/XWW2_Kanchatzu/XWW2_Pegasus_Bridge/XWW2_Rabaul/XWW2_Waldhambach/XWW2_Kendari/XWW2_Coral_Sea/XWW2_Olonets_Karelia;
+common_tx = "texture\Market_Garden_Textures\Tx";
+
+### 苏波战争(华沙战役)
+
+- PolKit20s:PolKit20s_i;PolKit20s_hat_sq;PolKit20s_hat_win;PolKit20s_helmet;ChauchatM1915(自制:ChauchatM1915_main/ChauchatM1915_mag/Iron_ChauchatM1915/Icon_ChauchatM1915/Chauchat_mono);
+    PolKit20s_helmet:PolKit20s_Eagle_logo;(PolKit20s_officer/PolKit20s_support/PolKit20s_rifile)
+    - Charron的机枪口调整(加了Ehrhardt的封闭机枪窗口);
+XWW2_Leoncin(1920/08/10):wwii_streetroad_very_long 平坦化修正;
+
+- XWW2_Jiangqiao(1931年11月7日,江桥抗战):;
+
+- 苏军蒙古族狙击手(SPKIT_SO_Mong_sniper):"SPKIT_SO_Mong_sniper.dds";Russ_ScoutHelm_cover(sniper_cover);"Iron_sniper.tga";
+
+### 新阵营:希腊
+ 
+GreeceSoldier:GreeceKit/Greek_i(GENERAL_GREECE);Greek_helmet;Greek_officer_hat;Greek_nco_hat;
+    Greek_officer/Greek_support/Greek_rifile;
+武器:Stationary_MGANON(Stationary_MGANON_main/Stationary_MGANON_Gun)/smg_ANON(Icon_smg_ANON)/grenade_ANON;
+坦克:VickersMkETB:VickersMkETB_Hull_M1(50)/VickersMkETB_Turret_M1(50);
+火炮:pindus_ANON(pindus_ANON_gun_m1->pindus_ANON_cannon);
+
+- XWW2_Kalamas_Line:XWW2加入希腊后,高频反馈是BG42已经有希腊了,为啥还要步人后尘?事实上XWW2的希腊模块相对于BG42增加了更多的希腊军帽、希腊的维克斯MKE-B型改装坦克、希腊的帕帕多斯机枪、希腊的索普斯冲锋枪、希腊的尤尼西亚步兵炮以及西塔隆手雷;
+- XWW2_Thermopylae:反坦克兵"Greek_1_AT"("GREEK_AT_KIT_1.dds");
+
+### 新阵营:斯洛伐克
+
+SlovakSoldier:https://www.ww2-weapons.com/slovak-armed-forces;
+SlovakKit:Slovak_i(GENERAL_SLOVAK);Slovak_helmet;Slovak_officer_hat;Slovak_nco_hat;
+    Slovak_officer/Slovak_support/Slovak_rifile/Slovak_AT;
+坦克:LTVz40:LTVz40_Hull_M1(50)/LTVz40_Turret_M1(50);
+
+- XWW2_Cieszyn:1939年斯洛伐克武装夺回波兰切欣地区(icon_flag_slovak);
+
+- 八路军冬季帽子(era_winter_cap):Karvalakki_rus/Karvalakki_rus_off;CERA_4_win;
+- Stationary_Maxim_NOG(精细的马克沁/俯卧姿势):Stationary_Maxim_NOG_main;模仿"Deployed_M1919a4",先构造枪体"Stationary_Maxim_NOG_Sd"(模仿"M1919a4Sd");枪声:"Stationary_Maxim_NOG.wav";
+
+### Pick from FXKR
+
+- CivModCar_Coupe/CivModCar_Buick1926:;
+- wwii_MG_Bunker_dsim(简易双机枪地堡):lod_wwii_MG_Bunker_dsim_Cockpit 的添加部分决定了"内视框"是否随着上下左右摆动而相对活动;
+    堡垒内机枪音效若隐若现的问题:移植FX的"Coaxial_DT",解决;
