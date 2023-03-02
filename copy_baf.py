@@ -52,10 +52,15 @@ def single_file_replace(CON_FILE,re_EFFECT_STR,CON_SCRIPT_STRING):
     FILE_STREAM.close();
 
 # ============= main =================
-NEW_SWORD_NAME = "china_spear";
-# copy_baf(NEW_SWORD_NAME);
+NEW_SWORD_NAME = "cossack_sword";
+copy_baf(NEW_SWORD_NAME);
 re_OLD_WEAPON_NAME = "china_broadsword_mod";
 OLD_WEAPON_FILE = "D:/BF1942/cache/animations/AnimationStates_china_broadsword_mod.con";
 NEW_CON_FILE = "D:/BF1942/cache/animations/AnimationStates_" + NEW_SWORD_NAME + ".con";
 shutil.copyfile( OLD_WEAPON_FILE, NEW_CON_FILE);
 single_file_replace(NEW_CON_FILE, re_OLD_WEAPON_NAME, NEW_SWORD_NAME);
+
+# 运行该文件后,你还需要在
+# 1."singleShotWeaponsMod.inc"中注册"AnimationStateMachine.copyState2 cossack_sword v_arg1";
+# 2."AnimationStates.con"中写入"run AnimationStates_cossack_sword";
+# 3.复制已有的"china_broadsword_mod.ske"为"cossack_sword.ske";
